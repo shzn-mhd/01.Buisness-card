@@ -27,6 +27,7 @@
                     transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
                     overflow: hidden;
                     position: relative;
+                    animation: rotateBorderColor 10s infinite linear;
                 }
 
                 .profileimage {
@@ -111,6 +112,29 @@
 
                 .businesscard:hover .skillcard{
                     height: 82%;
+                }
+
+                /* Add key frames for rotate border colors */
+                @keyframes rotateBorderColor{
+                    0% {
+                        box-shadow: 0 0 40px rgba(255, 0,0, 0.5);
+                    }
+
+                    25% {
+                        box-shadow: 0 0 40px rgba(255, 204,0, 0.5);
+                    }
+
+                    50% {
+                        box-shadow: 0 0 40px rgba(0, 255,0, 0.5);
+                    }
+
+                    75% {
+                        box-shadow: 0 0 40px rgba(51, 153,255, 0.5);
+                    }
+
+                    100% {
+                        box-shadow: 0 0 40px rgba(255, 0,0, 0.5);
+                    }
                 }
 
             </style>
